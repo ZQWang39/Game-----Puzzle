@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: beige;
+    color:rgb(5, 20, 88);
+}
+
+.header{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.original-pic{
+    text-align: center;
+}
+
+.original-pic h3{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+#original{
+    width:300px;
+    height:225px;
+}
+
+#original:hover{
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+.puzzle-section{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    height:500px;
+    margin-top: 30px;
+
+}
+
+.puzzle-parts{
+    width: 605px;
+    height:500px;
+    text-align: center;
+    border:solid rgb(3, 3, 58) 1px;
+    margin: auto;
+}
+
+.puzzle-area{
+    width: 605px;
+    height:500px;
+    text-align: center;
+    border:solid rgb(3, 3, 58) 1px;
+    margin: auto;
+}
+
+.parts-container{
+    width: 605px;
+    height:550px;
+    display:grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns:repeat(3, 200px);
+    grid-template-areas: 
+    "1 2 3"
+    "4 5 6"
+    "7 8 9";
+    gap: 2px;;
+    margin-top: 10px;
+}
+
+.parts {
+    border:solid 0.5px black;  
+
+}
+
+.part1 {
+    background:url(img/3.jpg);
+}
+.part2 {
+    background:url(img/6.jpg);
+}
+
+.part3 {
+    background:url(img/9.jpg);
+}
+
+.part4 {
+    background:url(img/5.jpg);
+}
+
+.part5 {
+    background:url(img/1.jpg);
+}
+
+.part6 {
+    background:url(img/4.jpg);
+}
+
+.part7 {
+    background:url(img/8.jpg);
+}
+
+.part8 {
+    background:url(img/2.jpg);
+}
+
+.part9 {
+    background:url(img/7.jpg);
+}
+
+
+.puzzle-container{
+    width: 605px;
+    height:550px;
+    display:grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns:repeat(3, 200px);
+    grid-template-areas: 
+    "1 2 3"
+    "4 5 6"
+    "7 8 9";
+    margin-top: 10px;
+}
+
+.puzzle {
+    background:wheat;
+    border:solid 0.5px whitesmoke;
+    
+}
+
+.hold{
+    border:tomato solid 2px;
+}
+
+.hovered{
+    border:dotted tomato 2px;
+} 
