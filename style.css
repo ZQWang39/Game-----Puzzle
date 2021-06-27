@@ -77,38 +77,38 @@ body{
 
 }
 
-.part1 {
+#part1 {
     background:url(img/3.jpg);
 }
-.part2 {
+#part2 {
     background:url(img/6.jpg);
 }
 
-.part3 {
+#part3 {
     background:url(img/9.jpg);
 }
 
-.part4 {
+#part4 {
     background:url(img/5.jpg);
 }
 
-.part5 {
+#part5 {
     background:url(img/1.jpg);
 }
 
-.part6 {
+#part6 {
     background:url(img/4.jpg);
 }
 
-.part7 {
+#part7 {
     background:url(img/8.jpg);
 }
 
-.part8 {
+#part8 {
     background:url(img/2.jpg);
 }
 
-.part9 {
+#part9 {
     background:url(img/7.jpg);
 }
 
@@ -139,3 +139,7 @@ body{
 .hovered{
     border:dotted tomato 2px;
 } 
+
+.invisible {
+    visibility: hidden;
+  }
