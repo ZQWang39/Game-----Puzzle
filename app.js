@@ -1,4 +1,4 @@
-const parts = document.querySelectorAll(".parts");
+const parts = document.querySelectorAll("div[id]");
 const puzzles = document.querySelectorAll(".puzzle");
 const rest = document.getElementById("reset-btn");
 
