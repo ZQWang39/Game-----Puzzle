@@ -78,53 +78,62 @@ body{
     width: 200px;
     height: 150px;
     background:url(img/3.jpg);
+    cursor: pointer;
 }
 #part2 {
     width: 200px;
     height: 150px;
     background:url(img/6.jpg);
+    cursor: pointer;
 }
 
 #part3 {
     width: 200px;
     height: 150px;
     background:url(img/9.jpg);
+    cursor: pointer;
 }
 
 #part4 {
     width: 200px;
     height: 150px;
     background:url(img/5.jpg);
+    cursor: pointer;
 }
 
 #part5 {
     width: 200px;
     height: 150px;
     background:url(img/1.jpg);
+    cursor: pointer;
 }
 
 #part6 {
     width: 200px;
     height: 150px;
     background:url(img/4.jpg);
+    cursor: pointer;
 }
 
 #part7 {
     width: 200px;
     height: 150px;
     background:url(img/8.jpg);
+    cursor: pointer;
 }
 
 #part8 {
     width: 200px;
     height: 150px;
     background:url(img/2.jpg);
+    cursor: pointer;
 }
 
 #part9 {
     width: 200px;
     height: 150px;
     background:url(img/7.jpg);
+    cursor: pointer;
 }
 
 
