@@ -1,5 +1,7 @@
-const parts = document.querySelectorAll(".parts");
+const parts = document.querySelectorAll("div[id]");
+//const part1 = document.getElementById("part1");
 const puzzles = document.querySelectorAll(".puzzle");
+//console.log(part1)
 
 /*for (const part of parts){
     part.ondragstart = function(e){
@@ -30,20 +32,20 @@ part.addEventListener ("dragend", dragEnd);
 function dragStart (e){
     //console.log(e.target.id);
     //console.log(e.target.outerHTML);
-    e.dataTransfer.setData("key", e.target.id)
+    //e.dataTransfer.setData("key", e.target.id)
     e.dataTransfer.setData("x",  JSON.stringify(e.target.outerHTML));
    
     e.target.className += " hold";
-    let self = this;
-    setTimeout(() => {
-        self.className = "invisible"
-    }, 0);
+    //let self = this;
+    setTimeout(() => (
+        this.className = "invisible"
+    ), 0);
    
     
 }
 
 function dragEnd (e){
-e.target.className = "parts";
+e.target.className = "";
 };   
 }
 
@@ -65,7 +67,7 @@ for (const puzzle of puzzles){
         this.className += " hovered"
     }
     
-    function dragLeave (e){
+    function dragLeave(e){
         e.preventDefault()
         //console.log("leave")
         this.className = "puzzle"
@@ -73,21 +75,22 @@ for (const puzzle of puzzles){
     
     function dragDrop (e){
         e.preventDefault()
+        e.target.className ="puzzle";
         //let dropItem = e.dataTransfer.getData('key');
         //console.log(dropItem);
        // e.target.id = dropItem;
       
        let dropItem = e.dataTransfer.getData('x');
        console.log( JSON.parse(dropItem));
-       var dragDataElement = document.createElement('div')
+       let dragDataElement = document.createElement('div')
        dragDataElement.innerHTML = JSON.parse(dropItem)
        console.log(dragDataElement.firstChild);
        let originalPart = dragDataElement.firstChild;
        //console.log(originalPart.id)
        //console.log(e.target)
        //e.target.className ="empty";
-       e.target.className ="puzzle"
-       e.target.appendChild(originalPart);
+      
+       e.target.append(originalPart);
       
     }
 }
