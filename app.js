@@ -1,5 +1,6 @@
 const parts = document.querySelectorAll(".parts");
 const puzzles = document.querySelectorAll(".puzzle");
+const rest = document.getElementById("reset-btn");
 
 /*for (const part of parts){
     part.ondragstart = function(e){
@@ -92,3 +93,8 @@ for (const puzzle of puzzles){
     }
 }
 
+
+rest.addEventListener('click',resetBtn);
+function resetBtn(){
+    window.location.reload();
+}
