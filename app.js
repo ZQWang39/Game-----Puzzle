@@ -26,9 +26,11 @@ for (const puzzle of puzzles){
 for (const part of parts){
 part.addEventListener ("dragstart", dragStart);
 part.addEventListener ("dragend", dragEnd);
+//console.log(part)
 function dragStart (e){
-    console.log(e.target);
-    console.log(e.target.outerHTML);
+    //console.log(e.target.id);
+    //console.log(e.target.outerHTML);
+    e.dataTransfer.setData("key", e.target.id)
     e.dataTransfer.setData("x",  JSON.stringify(e.target.outerHTML));
    
     e.target.className += " hold";
@@ -36,14 +38,13 @@ function dragStart (e){
     setTimeout(() => {
         self.className = "invisible"
     }, 0);
-    e.dataTransfer.setData("key", e.target.id)
+   
     
 }
 
 function dragEnd (e){
 e.target.className = "parts";
-};
-    
+};   
 }
 
 
@@ -81,12 +82,12 @@ for (const puzzle of puzzles){
        var dragDataElement = document.createElement('div')
        dragDataElement.innerHTML = JSON.parse(dropItem)
        console.log(dragDataElement.firstChild);
-       let originalPart = dragDataElement.firstChild.id;
+       let originalPart = dragDataElement.firstChild;
        //console.log(originalPart.id)
-       console.log(e.target)
+       //console.log(e.target)
        //e.target.className ="empty";
-       e.target.id = originalPart
        e.target.className ="puzzle"
+       e.target.appendChild(originalPart);
       
     }
 }
