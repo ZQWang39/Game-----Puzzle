@@ -30,7 +30,7 @@ part.addEventListener ("dragend", dragEnd);
 function dragStart (e){
     //console.log(e.target.id);
     //console.log(e.target.outerHTML);
-    e.dataTransfer.setData("key", e.target.id)
+    //e.dataTransfer.setData("key", e.target.id)
     e.dataTransfer.setData("x",  JSON.stringify(e.target.outerHTML));
    
     e.target.className += " hold";
